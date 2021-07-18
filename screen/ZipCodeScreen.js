@@ -3,6 +3,7 @@ import React from 'react'
 import { FlatList,View,Text,StyleSheet, TouchableHighlight } from 'react-native'
 import { color } from 'react-native-reanimated'
 
+
 const availableZipItems = [
     { place: 'Nakhonsithammarat', code: '90110' },
     { place: 'Thungsong', code: '80110' },
@@ -26,7 +27,7 @@ const ZipItem = ({place, code, navigation}) => (
 export default function ZipCodeScreen(){
     const navigation = useNavigation()
     return(
-        <FlatList
+        <FlatList 
             data = {availableZipItems}
             keyExtractor = {item => item.code}
             renderItem = {({item}) => <ZipItem {...item} navigation={navigation}/>}
@@ -38,7 +39,8 @@ const styles = StyleSheet.create({
     zipItem: {
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        backgroundColor: '#87CEEB',
     },
     zipPlace: {
         flex: 1,
