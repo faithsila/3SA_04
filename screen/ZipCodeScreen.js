@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { FlatList,View,Text,StyleSheet, TouchableHighlight } from 'react-native'
+import { FlatList,View,Text,StyleSheet, TouchableHighlight,ImageBackground } from 'react-native'
 import { color } from 'react-native-reanimated'
 
 
@@ -27,15 +27,21 @@ const ZipItem = ({place, code, navigation}) => (
 export default function ZipCodeScreen(){
     const navigation = useNavigation()
     return(
-        <FlatList 
-            data = {availableZipItems}
-            keyExtractor = {item => item.code}
-            renderItem = {({item}) => <ZipItem {...item} navigation={navigation}/>}
-        />
+        <ImageBackground source={require('../nakhon.jpg')} style={styles.bg}>
+            <FlatList 
+                data = {availableZipItems}
+                keyExtractor = {item => item.code}
+                renderItem = {({item}) => <ZipItem {...item} navigation={navigation}/>}
+            />
+        </ImageBackground>
     )
 }
 
 const styles = StyleSheet.create({
+    bg:{
+        width: '100%' ,
+        height: '100%' ,
+    },
     zipItem: {
         flex: 1,
         flexDirection: 'row',
