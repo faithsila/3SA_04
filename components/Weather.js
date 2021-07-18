@@ -44,18 +44,18 @@ const styles = StyleSheet.create({
         height: '100%'
     },
     innerText: {
-        color: 'white',
+        color: 'red',
         textAlign: 'center',
         fontSize: 23,
         paddingBottom: 15,
         textShadowOffset: {width: 2,height: 2},
         textShadowRadius: 10,
-        textShadowColor:'black',
+        textShadowColor:'pink',
     },
     container: { 
         justifyContent: 'center',
         width: '100%', 
-        height: '50%', 
+        height: '80%', 
         opacity: 0.5, 
         backgroundColor: '#012',
         alignItems: 'center',

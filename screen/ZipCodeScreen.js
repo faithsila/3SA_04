@@ -1,6 +1,7 @@
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { FlatList,View,Text,StyleSheet, TouchableHighlight } from 'react-native'
+import { color } from 'react-native-reanimated'
 
 const availableZipItems = [
     { place: 'Nakhonsithammarat', code: '90110' },
